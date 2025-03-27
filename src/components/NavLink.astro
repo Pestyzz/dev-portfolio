@@ -1,0 +1,11 @@
+---
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href} class:list={["h-7 p-2.5 rounded-[30px] inline-flex items-center text-stone-300", "hover:text-lime-300 transition-colors duration-200"]}>
+  <slot />
+</a>
