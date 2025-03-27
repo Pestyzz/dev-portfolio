@@ -1,15 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MyPicture from '../assets/MyPicture.webp';
 ---
 <Layout title="Portfolio - Bastián Ñiripil">
-	<main class="flex flex-col px-28 py-5 justify-start items-center">
-		<section class="inline-flex justify-between items-center">
+	<main class="absolute top-[180px] flex flex-col px-80 py-5 justify-start items-center gap-36">
+		<section class="self-stretch inline-flex justify-between items-center">
 			<div class="inline-flex flex-col">
 				<h1 class="text-white text-6xl font-medium">Hey, I'm Bastián Ñiripil</h1>
 			<h2 class="text-stone-300 text-3xl">
-				<span class="text-lime-200">Computer Engineering Student</span> in Duoc UC. Aspiring Web Developer from Concepción, Chile CL.
+				<span class="text-lime-300">Computer Engineering Student</span> in Duoc UC. Aspiring Web Developer from Concepción, Chile <span class="text-xl">CL</span>.
 			</h2>
 			</div>
+			<img class="w-96 h-[576.21px] origin-top-left rotate-[1.92deg] rounded-[40px] shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)] border-[15px] border-neutral-900" src="https://placehold.co/600x800@2x.webp?text=Image" alt="MyPicture">
+		</section>
+		<section id="projects" class="self-stretch">
+			<header class="inline-flex justify-between items-center">
+				<h1 class="text-white text-5xl font-medium">Projects</h1>
+			</header>
+		</section>
+		<section id="skills" class="self-stretch">
+			<header class="inline-flex justify-between items-center">
+				<h1 class="text-white text-5xl font-medium">Skills</h1>
+			</header>
+		</section>
+		<section id="about" class="self-stretch">
+			<header class="inline-flex justify-between items-center">
+				<h1 class="text-white text-5xl font-medium">About me</h1>
+			</header>
 		</section>
 	</main>
 </Layout>
