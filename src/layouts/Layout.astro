@@ -2,30 +2,25 @@
 import '../styles/global.css';
 import '@fontsource-variable/roboto';
 import Header from '../components/Header.astro';
-
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
 ---
 <!doctype html>
 <html class="dark" lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<title>Portfolio - Bastián Ñiripil</title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
 	</head>
-	<body class="relative bg-[#140923]">
-		<div class="absolute top-0 z-[-2] min-h-screen w-full bg-[radial-gradient(ellipse_69.13%_32.79%_at_50.00%_0.00%,_rgba(79.92,_12.18,_139.19,_0.32)_0%,_rgba(50.63,_7.72,_88.19,_0.32)_50%,_rgba(21.35,_3.25,_37.19,_0.42)_100%)]">
-		</div>
+	<body class="relative">
+		<div class="absolute top-0 z-[-2] size-full bg-[radial-gradient(ellipse_69.13%_32.79%_at_50.00%_0.00%,_rgba(79.92,_12.18,_139.19,_0.32)_0%,_rgba(50.63,_7.72,_88.19,_0.32)_50%,_rgba(21.35,_3.25,_37.19,_0.42)_100%)]"></div>
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
-<style is:global>
+<style>
 	:root {
 		color-scheme: light dark;
 	}
