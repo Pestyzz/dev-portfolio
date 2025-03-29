@@ -1,19 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-//import MyPicture from '../assets/MyPicture.webp';
+// import MyPicture from '../public/MyPicture.webp';
 import SocialPill from '../components/SocialPill.astro';
-import MailIcon from '../components/icons/Mail.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GithubIcon from '../components/icons/Github.astro';
+import MailIcon from '../assets/icons/Mail.svg';
+import LinkedInIcon from '../assets/icons/LinkedIn.svg';
+import GithubIcon from '../assets/icons/Github.svg';
+import ProjectsIcon from '../assets/icons/Projects.svg';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import { PROJECTS } from '../consts/projects';
 ---
 <Layout>
 	<main class="flex flex-col mt-[170px] px-80 py-5 justify-start items-center gap-36">
 		<section class="self-stretch inline-flex justify-between items-center">
-			<div class="inline-flex flex-col">
+			<div class="flex flex-col">
 				<h1 class="text-white text-6xl font-medium">Hey, I'm Bastián Ñiripil</h1>
-				<h2 class="text-stone-300 text-3xl text-wrap">
+				<h4 class="text-stone-300 text-3xl text-wrap">
 					<span class="text-lime-300">Computer Engineering Student</span> in Duoc UC. Aspiring Web Developer from Concepción, Chile <span class="text-xl">CL</span>.
-				</h2>
+				</h4>
 				<nav class="flex items-center mt-[30px] gap-7">
 					<SocialPill href="mailto:bastiniripil@gmail.com">
 						<MailIcon class="size-6 text-lime-300 group-hover:text-[#22053B] transition-colors duration-200" />
@@ -36,11 +40,22 @@ import GithubIcon from '../components/icons/Github.astro';
 			</div>
 			<img class="w-96 h-[576.21px] origin-top-left rotate-[1.92deg] rounded-[40px] shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)] border-[15px] border-neutral-900" src="https://placehold.co/600x800@2x.webp?text=Image" alt="MyPicture">
 		</section>
-		<section id="projects" class="self-stretch">
-			<header class="inline-flex justify-between items-center">
-				<h1 class="text-white text-5xl font-medium">Projects</h1>
-			</header>
-		</section>
+		<Section id="projects">
+			<ProjectsIcon slot="icon" class="size-10 text-lime-300"/>
+			<Fragment slot="title">Projects</Fragment>
+			<div class="grid grid-cols-2 gap-7 w-full">
+				{PROJECTS.map((project) => (
+					<Card
+						key={project.id}
+						title={project.title}
+						description={project.description}
+						image={project.image}
+						techs={project.tech}
+						repository={project.repository}
+					/>
+				))}
+			</div>
+		</Section>
 		<section id="skills" class="self-stretch">
 			<header class="inline-flex justify-between items-center">
 				<h1 class="text-white text-5xl font-medium">Skills</h1>
