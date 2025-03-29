@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// import MyPicture from '../public/MyPicture.webp';
 import SocialPill from '../components/SocialPill.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+//import MyPicture from '/public/images/MyPicture.webp';
+
 import MailIcon from '../assets/icons/Mail.svg';
 import LinkedInIcon from '../assets/icons/LinkedIn.svg';
 import GithubIcon from '../assets/icons/Github.svg';
 import ProjectsIcon from '../assets/icons/Projects.svg';
-import Section from '../components/Section.astro';
-import Card from '../components/Card.astro';
+
 import { PROJECTS } from '../consts/projects';
 ---
 <Layout>
@@ -38,7 +40,7 @@ import { PROJECTS } from '../consts/projects';
 					</SocialPill> -->
 				</nav>
 			</div>
-			<img class="w-96 h-[576.21px] origin-top-left rotate-[1.92deg] rounded-[40px] shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)] border-[15px] border-neutral-900" src="https://placehold.co/600x800@2x.webp?text=Image" alt="MyPicture">
+			<img class="w-96 h-[576.21px] origin-top-left rotate-[1.92deg] rounded-[40px] shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)] border-[15px] border-neutral-900" src="https://placehold.co/600x800@2x.webp?text=Image" alt="MyPicture" loading="lazy">
 		</section>
 		<Section id="projects">
 			<ProjectsIcon slot="icon" class="size-10 text-lime-300"/>
