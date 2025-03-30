@@ -12,4 +12,4 @@ export interface Project {
         logo: any;
         name: string;
     }[];
-}
+};
