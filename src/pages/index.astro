@@ -9,8 +9,10 @@ import MailIcon from '../assets/icons/Mail.svg';
 import LinkedInIcon from '../assets/icons/LinkedIn.svg';
 import GithubIcon from '../assets/icons/Github.svg';
 import ProjectsIcon from '../assets/icons/Projects.svg';
+import SkillsIcon from '../assets/icons/Skills.svg';
 
 import { PROJECTS } from '../consts/projects';
+import { SKILLS } from '../consts/skills';
 ---
 <Layout>
 	<main class="flex flex-col mt-[170px] px-80 py-5 justify-start items-center gap-36">
@@ -58,11 +60,18 @@ import { PROJECTS } from '../consts/projects';
 				))}
 			</div>
 		</Section>
-		<section id="skills" class="self-stretch">
-			<header class="inline-flex justify-between items-center">
-				<h1 class="text-white text-5xl font-medium">Skills</h1>
-			</header>
-		</section>
+		<Section id="skills">
+			<SkillsIcon slot="icon" class="size-10 text-lime-300" />
+			<Fragment slot="title">Skills</Fragment>
+			<div class="flex justify-center items-center flex-wrap px-5 py-7 gap-7 outline-2 outline-lime-300 rounded-[30px] bg-neutral-900">
+				{SKILLS.map((skill: { name: string, logo: any }) => (
+					<div class="group flex flex-col justify-center items-center">
+						<skill.logo class="size-24 group-hover:scale-105 transition-all duration-300" />
+						<span class="opacity-0 text-lime-300 font-medium group-hover:opacity-100 group-hover:mt-2 transition-all duration-300">{skill.name}</span>
+					</div>
+				))}
+			</div>
+		</Section>
 		<section id="about" class="self-stretch">
 			<header class="inline-flex justify-between items-center">
 				<h1 class="text-white text-5xl font-medium">About me</h1>
