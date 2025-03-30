@@ -11,10 +11,8 @@ const { title, description, image, repository, techs = [] } = Astro.props;
             {techs.map((tech: { logo: any; name: string }) => {
                 return tech.logo ? (
                     <div class="group flex items-center p-2 rounded-full bg-neutral-900 transition-all duration-300 hover:pr-4 hover:pl-2">
-                        <tech.logo 
-                            class="p-1 size-8 rounded-full border-2 border-stone-300 group-hover:border-lime-300 transition-colors duration-200"
-                        />
-                        <span class="text-stone-300 text-base font-medium max-w-0 group-hover:max-w-[100px] transition-all duration-300 overflow-hidden ml-0 group-hover:ml-2">{tech.name}</span>
+                        <tech.logo class="p-1 size-8 rounded-full border-2 border-stone-300 group-hover:border-lime-300 transition-colors duration-300" />
+                        <span class="opacity-0 text-stone-300 text-base font-medium max-w-0 group-hover:max-w-[100px] overflow-hidden group-hover:opacity-100 group-hover:ml-2 transition-all duration-300 ">{tech.name}</span>
                     </div>
                 ) : null;
             })}
