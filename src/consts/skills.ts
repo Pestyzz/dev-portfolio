@@ -41,7 +41,7 @@ export const SKILLS: Skill[] = [
     {
         id: "5",
         logo: CsharpIcon,
-        name: "Csharp"
+        name: "C#"
     },
     {
         id: "6",
