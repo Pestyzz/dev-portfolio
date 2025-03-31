@@ -20,7 +20,7 @@ const { title, description, image, repository, techs = [] } = Astro.props;
     </div>
     <div class="flex justify-between items-center gap-2 w-full">
         <h3 class="text-white text-4xl font-medium">{title}</h3>
-        <a 
+        <a
             href={repository}
             target="_blank"
             rel="noopener noreferrer"
@@ -30,5 +30,5 @@ const { title, description, image, repository, techs = [] } = Astro.props;
             Repository
         </a>
     </div>
-    <p class="text-stone-300 w-full text-start text-3xl font-medium">{description}</p>
+    <p class="text-stone-300 w-full text-start text-3xl">{description}</p>
 </div>
