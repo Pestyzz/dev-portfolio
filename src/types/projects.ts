@@ -1,6 +1,6 @@
 type ProjectId = "1" | "2" | "3" | "4";
 
-type ProjectName = "Ecommerce Books" | "Masterbikes" | "TeLlevoAPP" | "Annie's Gallery";
+type ProjectName = "Rincón Literario" | "Masterbikes" | "TeLlevoAPP" | "Annie's Gallery";
 
 export interface Project {
     id: ProjectId;

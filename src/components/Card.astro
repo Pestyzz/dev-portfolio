@@ -6,7 +6,7 @@ const { title, description, image, repository, techs = [] } = Astro.props;
 
 <div class="flex flex-col items-center p-4 gap-2 w-xl h-[460px] rounded-[10px] outline-2 outline-lime-300 bg-[#2B173D]">
     <div class="relative flex justify-start items-end w-full h-72 rounded-lg">
-        <img class="size-full object-cover rounded-lg" src={image} alt={title} />
+        <img class="size-full object-cover rounded-lg" src={image} alt={title} loading="lazy" />
         <div class="absolute flex justify-end items-start flex-col p-2 gap-2 h-full w-full">
             {techs.map((tech: { logo: any; name: string }) => {
                 return tech.logo ? (

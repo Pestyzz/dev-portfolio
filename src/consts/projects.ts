@@ -9,10 +9,10 @@ import BootstrapIcon from "../assets/icons/Bootstrap.svg";
 export const PROJECTS: Project[] = [
     {
         id: "1",
-        title: "Ecommerce Books",
+        title: "Rincón Literario",
         description: "Ecommerce for books. Small project for college.",
         repository: "https://github.com/pestyzz/Libros_Web",
-        image: "https://placehold.co/400",
+        image: "/images/RinconLiterario.webp",
         tech: [
             {
                 logo: DjangoIcon,
@@ -29,15 +29,15 @@ export const PROJECTS: Project[] = [
         title: "Masterbikes",
         description: "Ecommerce for bicycles. Small project for college.",
         repository: "https://github.com/pestyzz/Masterbikes",
-        image: "https://placehold.co/400",
+        image: "/images/MasterBikes.webp",
         tech: [
             {
-                logo: AngularIcon,
-                name: "Angular"
+                logo: DjangoIcon,
+                name: "Django"
             },
             {
-                logo: FirebaseIcon,
-                name: "Firebase"
+                logo: BootstrapIcon,
+                name: "Bootstrap"
             }
         ]
     },
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
         title: "TeLlevoAPP",
         description: "Ecommerce for bicycles. Small project for college.",
         repository: "https://github.com/pestyzz/TeLlevoAPP",
-        image: "https://placehold.co/400",
+        image: "/images/TeLlevoAPP.webp",
         tech: [
             {
                 logo: IonicIcon,
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
         title: "Annie's Gallery",
         description: "Gallery art for Annie. Personal project.",
         repository: "http://github.com/pestyzz/AnniesGallery",
-        image: "https://placehold.co/400",
+        image: "/images/AnniesGallery.webp",
         tech: [
             {
                 logo: AngularIcon,
