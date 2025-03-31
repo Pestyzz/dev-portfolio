@@ -12,6 +12,7 @@ import LinkedInIcon from '../assets/icons/LinkedIn.svg';
 import GithubIcon from '../assets/icons/Github.svg';
 import ProjectsIcon from '../assets/icons/Projects.svg';
 import SkillsIcon from '../assets/icons/Skills.svg';
+import AboutIcon from '../assets/icons/About.svg';
 
 import { PROJECTS } from '../consts/projects';
 import { SKILLS } from '../consts/skills';
@@ -69,15 +70,22 @@ import { SKILLS } from '../consts/skills';
 				{SKILLS.map((skill: { name: string, logo: any }) => (
 					<div class="group flex flex-col justify-center items-center">
 						<skill.logo class="size-24 group-hover:scale-105 transition-all duration-300" />
-						<span class="opacity-0 translate-y-0 text-stone-300 font-medium group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-300">{skill.name}</span>
+						<span class="opacity-0 translate-y-0 text-stone-300 text-lg font-medium group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-300">{skill.name}</span>
 					</div>
 				))}
 			</div>
 		</Section>
-		<section id="about" class="self-stretch">
-			<header class="inline-flex justify-between items-center">
-				<h1 class="text-white text-5xl font-medium">About me</h1>
-			</header>
-		</section>
+		<Section id="about">
+			<AboutIcon slot="icon" class="size-10 text-lime-300" />
+			<Fragment slot="title">About me</Fragment>
+			<div class="flex flex-col items-start text-stone-300 text-3xl font-medium text-pretty prose">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo vel arcu non placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. In a pulvinar elit. Suspendisse potenti.
+				</p>
+				<p>
+					Nunc varius libero felis, a viverra sem tincidunt luctus. In hac habitasse platea dictumst. Proin sed eleifend nisl. Donec sed leo vitae est scelerisque ultrices. Donec dignissim vitae arcu a luctus.
+				</p>
+			</div>
+		</Section>
 	</main>
 </Layout>
