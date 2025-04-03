@@ -3,11 +3,11 @@ import NavLink from "./NavLink.astro";
 import ThemeSwitch from "./ThemeSwitch.astro";
 ---
 <header class="flex justify-center items-center mx-auto mt-[30px] fixed w-full top-0 z-1">
-    <nav class="inline-flex justify-center items-center h-11 pl-2.5 pr-5 gap-1.5 rounded-[20px] bg-[#22053B] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-        <NavLink href="#projects">Projects</NavLink>
-        <NavLink href="#skills">Skills</NavLink>
-        <NavLink href="#about">About me</NavLink>
-        <NavLink href="#contact">Contact</NavLink>
+    <nav class="inline-flex justify-center items-center h-11 pl-2.5 pr-5 gap-1.5 rounded-[20px] bg-[#b3a2c2] dark:bg-[#22053B] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
+        <NavLink href="#projects" aria-label="Projects">Projects</NavLink>
+        <NavLink href="#skills" aria-label="Skills">Skills</NavLink>
+        <NavLink href="#about" aria-label="About me">About me</NavLink>
+        <NavLink href="mailto:bastiniripil@gmail.com" aria-label="Contact">Contact</NavLink>
         <ThemeSwitch />
     </nav>
 </header>

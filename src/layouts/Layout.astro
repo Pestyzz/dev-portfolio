@@ -5,14 +5,24 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 <!doctype html>
-<html lang="es">
+<html class="dark" lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>Portfolio - Bastián Ñiripil</title>
 		<link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+		<script>
+			if (
+			  localStorage.theme === 'dark' ||
+			  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+			  document.documentElement.classList.add('dark');
+			} else {
+			  document.documentElement.classList.remove('dark');
+			}
+		</script>
 	</head>
-	<body class="relative bg-white dark:bg-black">
+	<body class="relative bg-white dark:bg-[#1A1220]">
 		<div class="absolute top-0 z-[-2] size-full bg-[radial-gradient(ellipse_69.13%_32.79%_at_50.00%_0.00%,_rgba(79.92,_12.18,_139.19,_0.32)_0%,_rgba(50.63,_7.72,_88.19,_0.32)_50%,_rgba(21.35,_3.25,_37.19,_0.42)_100%)] dark:bg-[radial-gradient(ellipse_69.13%_32.79%_at_50.00%_0.00%,_rgba(79.92,_12.18,_139.19,_0.32)_0%,_rgba(50.63,_7.72,_88.19,_0.32)_50%,_rgba(21.35,_3.25,_37.19,_0.42)_100%)]"></div>
 		<Header />
 		<slot />
@@ -20,28 +30,44 @@ import Footer from '../components/Footer.astro';
 	</body>
 </html>
 
-<style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-
+<style>
 	html {
-		font-family: 'Roboto Variable', sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	body {
-		margin: 0;
-		width: 100%;
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
+			font-family: 'Roboto Variable', sans-serif;
+			scroll-behavior: smooth;
 		}
-	}
+
+		body {
+			margin: 0;
+			width: 100%;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			html {
+				scroll-behavior: auto;
+			}
+		}
+
+		/* Global theme transition */
+		* {
+			transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+		}
+		
+		/* Prevent transition on initial load */
+		[data-theme-transition="false"] * {
+			transition: none !important;
+		}
+		
+		/* Remove theme transition flag after initial load */
+		
 </style>
+
+<script>
+	document.documentElement.dataset.themeTransition = 'false';
+	setTimeout(() => {
+		document.documentElement.dataset.themeTransition = 'true';
+	}, 0);
+</script>
