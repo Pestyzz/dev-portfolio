@@ -10,7 +10,8 @@ export const PROJECTS: Project[] = [
     {
         id: "1",
         title: "Rincón Literario",
-        description: "Ecommerce for books. Small project for college.",
+        type: "College",
+        description: "E-commerce of books including auth and dashboard for product, purchase and user management.",
         repository: "https://github.com/pestyzz/Libros_Web",
         image: "/images/RinconLiterario.webp",
         tech: [
@@ -27,7 +28,8 @@ export const PROJECTS: Project[] = [
     {
         id: "2",
         title: "Masterbikes",
-        description: "Ecommerce for bicycles. Small project for college.",
+        type: "College",
+        description: "E-commerce of bicycles, services and accessories. Includes auth and product tracking.",
         repository: "https://github.com/pestyzz/Masterbikes",
         image: "/images/MasterBikes.webp",
         tech: [
@@ -44,7 +46,8 @@ export const PROJECTS: Project[] = [
     {
         id: "3",
         title: "TeLlevoAPP",
-        description: "Ecommerce for bicycles. Small project for college.",
+        type: "College",
+        description: "Trip application including authentication and travel system.",
         repository: "https://github.com/pestyzz/TeLlevoAPP",
         image: "/images/TeLlevoAPP.webp",
         tech: [
@@ -61,7 +64,8 @@ export const PROJECTS: Project[] = [
     {
         id: "4",
         title: "Annie's Gallery",
-        description: "Gallery art for Annie. Personal project.",
+        type: "Personal",
+        description: "Artistic platform including authentication and administrative dashboard.",
         repository: "http://github.com/pestyzz/AnniesGallery",
         image: "/images/AnniesGallery.webp",
         tech: [
