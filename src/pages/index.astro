@@ -44,7 +44,12 @@ import { SKILLS } from '../consts/skills';
 					</SocialPill> -->
 				</nav>
 			</div>
-			<Image class="w-100 origin-top-left rotate-[1.92deg] rounded-[40px] shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)] border-[15px] border-neutral-900" src={Picture} alt="MyPicture" loading="eager" />
+			<Image 
+				class="w-100 rotate-[1.92deg] rounded-[40px] border-[15px] border-neutral-900 shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)]" 
+				src={Picture} 
+				alt="MyPicture" 
+				loading="eager" 
+			/>
 		</section>
 		<Section id="projects">
 			<ProjectsIcon slot="icon" class="size-10 text-lime-200 dark:text-lime-300"/>
@@ -78,12 +83,12 @@ import { SKILLS } from '../consts/skills';
 		<Section id="about">
 			<AboutIcon slot="icon" class="size-10 text-lime-200 dark:text-lime-300" />
 			<Fragment slot="title">About me</Fragment>
-			<div class="flex flex-col items-start text-stone-200 text-3xl font-medium text-pretty prose">
+			<div class="flex flex-col items-start text-stone-200 text-3xl font-medium text-balanced prose-sm">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo vel arcu non placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. In a pulvinar elit. Suspendisse potenti.
+					I’m <span class="text-lime-200 dark:text-lime-300">Bastián Ñiripil</span>, a <span class="text-lime-200 dark:text-lime-300">Computer Engineering student at Duoc UC</span> and a programming enthusiast since I was 14. At 20, I blend academic learning with hands-on projects like Annie's Gallery, an art gallery platform I built featuring authentication and content management.	
 				</p>
 				<p>
-					Nunc varius libero felis, a viverra sem tincidunt luctus. In hac habitasse platea dictumst. Proin sed eleifend nisl. Donec sed leo vitae est scelerisque ultrices. Donec dignissim vitae arcu a luctus.
+					I specialize in <span class="text-lime-200 dark:text-lime-300">frontend technologies (Astro, Angular, Django)</span> to craft intuitive, efficient interfaces. Aiming to grow as a full-stack developer, I focus on solutions that balance innovation and functionality, wrapped in clean design. <span class="text-lime-200 dark:text-lime-300">Code, coffee, and challenges</span> are my recipe for making an impact.
 				</p>
 			</div>
 		</Section>
