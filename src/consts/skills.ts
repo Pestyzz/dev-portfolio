@@ -30,14 +30,15 @@ export const SKILLS: Skill[] = [
     },
     {
         id: "3",
-        logo: IonicIcon,
-        name: "Ionic"
-    },
-    {
-        id: "4",
         logo: DjangoIcon,
         name: "Django"
     },
+    {
+        id: "4",
+        logo: IonicIcon,
+        name: "Ionic"
+    },
+
     {
         id: "5",
         logo: CsharpIcon,
