@@ -2,21 +2,34 @@
 import GithubIcon from "../assets/icons/Github.svg";
 import Image from "astro/components/Image.astro";
 
-const { title, description, image, repository, techs = [] } = Astro.props;
+const { title, type, description, image, repository, techs = [] } = Astro.props;
 ---
 
-<div class="flex flex-col items-center p-4 gap-2 w-xl h-[460px] rounded-[10px] outline-2 outline-lime-200 dark:outline-lime-300 bg-[#baa8ca] dark:bg-[#2B173D]">
-    <div class="relative flex justify-start items-end w-full h-72 rounded-lg">
-        <Image class="size-full object-cover rounded-lg" src={image} alt={title} width={400} height={400} loading="lazy" />
-        <div class="absolute flex justify-end items-start flex-col p-2 gap-2 h-full w-full">
+<article class="group/img flex flex-col items-center p-4 gap-2 w-xl min-h-[460px] rounded-[10px] outline-2 outline-lime-200 dark:outline-lime-300 bg-[#baa8ca] dark:bg-[#2B173D]">
+    <div class="relative flex justify-between items-end w-full h-72 rounded-lg overflow-hidden">
+        <Image 
+            class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover/img:scale-110" 
+            src={image} 
+            width={400} 
+            height={400} 
+            alt={title} 
+            loading="lazy" 
+        />
+        <div class="absolute left-0 flex justify-end items-start flex-col p-2 gap-2">
             {techs.map((tech: { logo: any; name: string }) => {
                 return tech.logo ? (
-                    <div class="group flex items-center p-2 rounded-full bg-neutral-900 transition-all duration-300 hover:pr-4 hover:pl-2" aria-label={tech.name}>
-                        <tech.logo class="p-1 size-8 rounded-full border-2 border-stone-300 group-hover:border-lime-300 transition-colors duration-300" />
-                        <span class="opacity-0 text-stone-300 text-base font-medium max-w-0 group-hover:max-w-[100px] overflow-hidden group-hover:opacity-100 group-hover:ml-2 transition-all duration-300 ">{tech.name}</span>
+                    <div 
+                        class="group/tech flex items-center p-2 rounded-full bg-neutral-900 transition-all duration-300 hover:pr-4 hover:pl-2" 
+                        aria-label={tech.name}
+                    >
+                        <tech.logo class="p-1 size-8 rounded-full border-2 border-stone-300 group-hover/tech:border-lime-300 transition-colors duration-300" />
+                        <span class="opacity-0 text-stone-300 text-md font-medium max-w-0 translate-x-0 group-hover/tech:max-w-[100px] overflow-hidden group-hover/tech:opacity-100 group-hover/tech:translate-x-2 group-hover/tech:mr-2 transition-all duration-300">{tech.name}</span>
                     </div>
                 ) : null;
             })}
+        </div>
+        <div class="absolute right-0 flex justify-end items-end p-2 opacity-90">
+            <span class="rounded-3xl bg-[#2B173D] text-stone-200 text-base font-medium px-3 py-1 outline-2 outline-lime-300">{type} Project</span>
         </div>
     </div>
     <div class="flex justify-between items-center gap-2 w-full">
@@ -33,4 +46,4 @@ const { title, description, image, repository, techs = [] } = Astro.props;
         </a>
     </div>
     <p class="text-stone-200 dark:text-stone-300 w-full text-start text-3xl">{description}</p>
-</div>
+</article>
