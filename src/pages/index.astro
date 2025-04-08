@@ -17,25 +17,25 @@ import { PROJECTS } from '../consts/projects';
 import { SKILLS } from '../consts/skills';
 ---
 <Layout>
-	<main class="flex flex-col mt-[170px] px-80 py-5 justify-start items-center gap-36">
-		<section class="self-stretch inline-flex justify-between items-center">
+	<main class="flex flex-col mt-[170px] py-5 justify-start items-center gap-36 w-screen md:w-auto md:px-80">
+		<section class="flex flex-wrap justify-center items-center gap-8 text-center md:self-stretch md:flex-nowrap md:justify-between md:text-start">
 			<div class="flex flex-col gap-6">
-				<h1 class="text-gray-50 dark:text-white text-6xl font-medium">Hey, I'm Bastián Ñiripil</h1>
-				<h4 class="text-stone-200 dark:text-stone-300 text-3xl text-wrap">
+				<h1 class="text-gray-50 dark:text-white text-3xl font-medium md:text-6xl">Hey, I'm Bastián Ñiripil</h1>
+				<h4 class="text-stone-200 dark:text-stone-300 text-xl text-balance md:text-3xl md:text-wrap">
 					<span class="text-lime-200 dark:text-lime-300">Computer Engineering Student</span> in Duoc UC. Aspiring Web Developer from Concepción, Chile <span class="text-xl">CL</span>.
 				</h4>
-				<nav class="flex items-center gap-7">
+				<nav class="flex flex-col items-center gap-4 md:flex-row md:gap-7">
 					<SocialPill href="mailto:bastiniripil@gmail.com" aria-label="Mail me">
-						<MailIcon class="size-6 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200" />
+						<MailIcon class="size-4 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
 						<span>Mail me</span>
 					</SocialPill>
 					
 					<SocialPill href="https://github.com/pestyzz" aria-label="GitHub">
-						<GithubIcon class="size-6 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200" />
+						<GithubIcon class="size-4 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
 						<span>GitHub</span>
 					</SocialPill>
 					<SocialPill href="https://cl.linkedin.com/in/bastian-%C3%B1iripil" aria-label="LinkedIn">
-						<LinkedInIcon class="size-6 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200" />
+						<LinkedInIcon class="size-4 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
 						<span>LinkedIn</span>
 					</SocialPill>
 					<!-- <SocialPill href="" download>
@@ -45,7 +45,7 @@ import { SKILLS } from '../consts/skills';
 				</nav>
 			</div>
 			<Image 
-				class="w-100 rotate-[1.92deg] rounded-[40px] border-[15px] border-neutral-900 shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)]" 
+				class="w-80 rotate-[1.92deg] rounded-[40px] border-[15px] border-neutral-900 shadow-[8px_8px_12px_0px_rgba(0,0,0,0.25)] md:w-100" 
 				src={Picture} 
 				alt="MyPicture" 
 				loading="eager" 
