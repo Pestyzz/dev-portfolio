@@ -54,7 +54,7 @@ import { SKILLS } from '../consts/skills';
 		<Section id="projects">
 			<ProjectsIcon slot="icon" class="size-10 text-lime-200 dark:text-lime-300"/>
 			<Fragment slot="title">Projects</Fragment>
-			<div class="grid grid-cols-2 gap-7 w-full">
+			<div class="grid grid-cols-1 gap-7 w-full md:grid-cols-2">
 				{PROJECTS.map((project) => (
 					<Card
 						key={project.id}

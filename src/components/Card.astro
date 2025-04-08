@@ -5,7 +5,7 @@ import Image from "astro/components/Image.astro";
 const { title, type, description, image, repository, techs = [] } = Astro.props;
 ---
 
-<article class="group/img flex flex-col items-center p-4 gap-2 w-xl min-h-[460px] rounded-[10px] outline-2 outline-lime-200 dark:outline-lime-300 bg-[#baa8ca] dark:bg-[#2B173D] transition-all duration-200">
+<article class="group/img flex flex-col items-center p-4 gap-2 w-full min-h-[460px] rounded-[10px] outline-2 outline-lime-200 dark:outline-lime-300 bg-[#baa8ca] dark:bg-[#2B173D] transition-all duration-200 md:w-xl">
     <div class="relative flex justify-between items-end w-full h-72 rounded-lg overflow-hidden">
         <Image 
             class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover/img:scale-110" 
