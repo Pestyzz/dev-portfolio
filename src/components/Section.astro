@@ -5,7 +5,7 @@ const { id } = Astro.props;
 <section id={id} class="flex flex-wrap justify-center self-stretch px-5 gap-7 md:justify-normal md:px-0">
     <header class="flex items-center gap-5">
         <slot name="icon" />
-        <h2 class="text-white text-5xl font-medium"><slot name="title" /></h2>
+        <h2 class="text-white text-4xl font-medium md:text-5xl"><slot name="title" /></h2>
     </header>
     <slot />
 </section>

@@ -20,22 +20,22 @@ import { SKILLS } from '../consts/skills';
 	<main class="flex flex-col mt-[170px] py-5 justify-start items-center gap-36 w-screen md:w-auto md:px-80">
 		<section class="flex flex-wrap justify-center items-center gap-8 text-center md:self-stretch md:flex-nowrap md:justify-between md:text-start">
 			<div class="flex flex-col gap-6">
-				<h1 class="text-gray-50 dark:text-white text-3xl font-medium md:text-6xl">Hey, I'm Bastián Ñiripil</h1>
-				<h4 class="text-stone-200 dark:text-stone-300 text-xl text-balance md:text-3xl md:text-wrap">
+				<h1 class="text-gray-50 dark:text-white text-4xl font-medium md:text-6xl">Hey, I'm Bastián Ñiripil</h1>
+				<h4 class="text-stone-200 dark:text-stone-300 text-2xl text-balance md:text-3xl md:text-wrap">
 					<span class="text-lime-200 dark:text-lime-300">Computer Engineering Student</span> in Duoc UC. Aspiring Web Developer from Concepción, Chile <span class="text-xl">CL</span>.
 				</h4>
 				<nav class="flex flex-col items-center gap-4 md:flex-row md:gap-7">
 					<SocialPill href="mailto:bastiniripil@gmail.com" aria-label="Mail me">
-						<MailIcon class="size-4 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
+						<MailIcon class="size-5 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
 						<span>Mail me</span>
 					</SocialPill>
 					
 					<SocialPill href="https://github.com/pestyzz" aria-label="GitHub">
-						<GithubIcon class="size-4 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
+						<GithubIcon class="size-5 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
 						<span>GitHub</span>
 					</SocialPill>
 					<SocialPill href="https://cl.linkedin.com/in/bastian-%C3%B1iripil" aria-label="LinkedIn">
-						<LinkedInIcon class="size-4 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
+						<LinkedInIcon class="size-5 text-lime-200 dark:text-lime-300 group-hover:text-gray-700 group-hover:dark:text-[#22053B] transition-colors duration-200 md:size-6" />
 						<span>LinkedIn</span>
 					</SocialPill>
 					<!-- <SocialPill href="" download>
@@ -52,7 +52,7 @@ import { SKILLS } from '../consts/skills';
 			/>
 		</section>
 		<Section id="projects">
-			<ProjectsIcon slot="icon" class="size-10 text-lime-200 dark:text-lime-300"/>
+			<ProjectsIcon slot="icon" class="size-8 text-lime-200 dark:text-lime-300 md:size-10"/>
 			<Fragment slot="title">Projects</Fragment>
 			<div class="grid grid-cols-1 gap-7 w-full md:grid-cols-2">
 				{PROJECTS.map((project) => (
@@ -69,21 +69,21 @@ import { SKILLS } from '../consts/skills';
 			</div>
 		</Section>
 		<Section id="skills">
-			<SkillsIcon slot="icon" class="size-10 text-lime-200 dark:text-lime-300" />
+			<SkillsIcon slot="icon" class="size-8 text-lime-200 dark:text-lime-300 md:size-10" />
 			<Fragment slot="title">Skills</Fragment>
 			<div class="flex justify-center items-center flex-wrap px-5 pt-10 pb-6 gap-7 outline-2 outline-lime-200 dark:outline-lime-300 rounded-[30px] bg-neutral-700 dark:bg-neutral-900 transition-colors duration-200">
 				{SKILLS.map((skill: { name: string, logo: any }) => (
 					<div class="group flex flex-col justify-center items-center">
-						<skill.logo class="size-24 group-hover:scale-105 transition-all duration-300" />
+						<skill.logo class="size-20 group-hover:scale-105 transition-all duration-300 md:size-24" />
 						<span class="opacity-0 translate-y-0 text-stone-300 text-lg font-medium group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-300">{skill.name}</span>
 					</div>
 				))}
 			</div>
 		</Section>
 		<Section id="about">
-			<AboutIcon slot="icon" class="size-10 text-lime-200 dark:text-lime-300" />
+			<AboutIcon slot="icon" class="size-8 text-lime-200 dark:text-lime-300 md:size-10" />
 			<Fragment slot="title">About me</Fragment>
-			<div class="flex flex-col items-start text-stone-200 text-3xl font-medium text-balanced prose-sm">
+			<div class="flex flex-col items-start text-stone-200 text-2xl text-center font-medium text-balanced prose-sm md:text-start md:text-3xl">
 				<p>
 					I’m <span class="text-lime-200 dark:text-lime-300">Bastián Ñiripil</span>, a <span class="text-lime-200 dark:text-lime-300">Computer Engineering student at Duoc UC</span> and a programming enthusiast since I was 14. At 20, I blend academic learning with hands-on projects like Annie's Gallery, an art gallery platform I built featuring authentication and content management.	
 				</p>

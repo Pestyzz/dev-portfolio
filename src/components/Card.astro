@@ -5,8 +5,8 @@ import Image from "astro/components/Image.astro";
 const { title, type, description, image, repository, techs = [] } = Astro.props;
 ---
 
-<article class="group/img flex flex-col items-center p-4 gap-2 w-full min-h-[460px] rounded-[10px] outline-2 outline-lime-200 dark:outline-lime-300 bg-[#baa8ca] dark:bg-[#2B173D] transition-all duration-200 md:w-xl">
-    <div class="relative flex justify-between items-end w-full h-72 rounded-lg overflow-hidden">
+<article class="group/img flex flex-col items-center p-4 gap-2 w-full min-h-[460px] rounded-[10px] outline-2 outline-lime-200 dark:outline-lime-300 bg-[#baa8ca] dark:bg-[#2B173D] transition-all duration-200">
+    <div class="relative flex justify-between items-end w-full h-68 rounded-lg overflow-hidden md:h-72">
         <Image 
             class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover/img:scale-110" 
             src={image} 
@@ -33,7 +33,7 @@ const { title, type, description, image, repository, techs = [] } = Astro.props;
         </div>
     </div>
     <div class="flex justify-between items-center gap-2 w-full">
-        <h3 class="text-white text-4xl font-medium">{title}</h3>
+        <h3 class="text-white text-2xl font-medium md:text-4xl">{title}</h3>
         <a
             href={repository}
             target="_blank"
@@ -45,5 +45,5 @@ const { title, type, description, image, repository, techs = [] } = Astro.props;
             Repository
         </a>
     </div>
-    <p class="text-stone-200 dark:text-stone-300 w-full text-start text-3xl">{description}</p>
+    <p class="text-stone-200 dark:text-stone-300 w-full text-start text-xl md:text-3xl">{description}</p>
 </article>
