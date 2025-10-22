@@ -1,44 +1,51 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
+  # Se ejecuta cuando haces push a la rama principal
   push:
-    branches: [ master ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+    branches: ["master"] # Cambia a "master" si tu rama se llama así
+  
+  # Permite ejecutarlo manualmente desde la pestaña de Actions
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
+# Permisos especiales para que el workflow pueda desplegar en GitHub Pages
 permissions:
-  contents: read
   pages: write
   id-token: write
 
 jobs:
+  # Primer trabajo: construir el sitio
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository
         uses: actions/checkout@v4
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
+          node-version: "20"
+      
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
-
+          
       - name: Install dependencies
         run: pnpm install
-
-      - name: Build Astro site
+        
+      - name: Build with Astro
         run: pnpm run build
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3 # <--- Este paso es clave
+        with:
+          # Sube el contenido de la carpeta 'dist'
+          path: ./dist
 
+  # Segundo trabajo: desplegar el sitio
   deploy:
-    needs: build
+    needs: build # Este trabajo depende de que 'build' termine con éxito
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -46,4 +53,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # <--- Este paso publica el artifact
