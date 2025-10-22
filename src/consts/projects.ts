@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
         type: "College",
         description: "E-commerce of books including auth and dashboard for product, purchase and user management.",
         repository: "https://github.com/pestyzz/Libros_Web",
-        image: "/images/RinconLiterario.webp",
+        image: "/dev-portfolio/images/RinconLiterario.webp",
         tech: [
             {
                 logo: DjangoIcon,
@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
         type: "College",
         description: "E-commerce of bicycles, services and accessories. Includes auth and product tracking.",
         repository: "https://github.com/pestyzz/Masterbikes-Web",
-        image: "/images/MasterBikes.webp",
+        image: "/dev-portfolio/images/MasterBikes.webp",
         tech: [
             {
                 logo: DjangoIcon,
@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
         type: "College",
         description: "Trip application including authentication and travel system.",
         repository: "https://github.com/pestyzz/TeLlevoAPP",
-        image: "/images/TeLlevoAPP.webp",
+        image: "/dev-portfolio/images/TeLlevoAPP.webp",
         tech: [
             {
                 logo: IonicIcon,
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
         type: "Personal",
         description: "Artistic platform including authentication and administrative dashboard.",
         repository: "http://github.com/pestyzz/AnniesGallery",
-        image: "/images/AnniesGallery.webp",
+        image: "/dev-portfolio/images/AnniesGallery.webp",
         tech: [
             {
                 logo: AngularIcon,
