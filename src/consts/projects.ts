@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
         title: "Masterbikes",
         type: "College",
         description: "E-commerce of bicycles, services and accessories. Includes auth and product tracking.",
-        repository: "https://github.com/pestyzz/Masterbikes",
+        repository: "https://github.com/pestyzz/Masterbikes-Web",
         image: "/images/MasterBikes.webp",
         tech: [
             {
