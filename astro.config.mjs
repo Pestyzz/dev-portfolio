@@ -11,4 +11,6 @@ export default defineConfig({
   experimental: {
     svg: true,
   },
+  site: 'https://pestyzz.github.io',
+  base: '/dev-portfolio'
 });
